@@ -1,0 +1,5 @@
+FROM java:8
+COPY . /home/stu9/s7/cr4383/DSproject2/Load_BalancerFolder/Load_Balancer/src
+WORKDIR /home/stu9/s7/cr4383/DSproject2/Load_BalancerFolder/Load_Balancer/src
+RUN javac -cp mongo-java-driver-3.0.2.jar:bson-3.0.2.jar:mongodb-driver-core-3.0.2.jar:json-simple-1.1.1.jar:minimal-json-0.9.4.jar:.  Server1.java
+CMD ["java","-classpath", "mongo-java-driver-3.0.2.jar:bson-3.0.2.jar:mongodb-driver-core-3.0.2.jar:json-simple-1.1.1.jar:minimal-json-0.9.4.jar:.", "Server1"]
